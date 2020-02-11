@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register  Exercise 03</title>
+</head>
+<body>
+  <h1>Register</h1>
+  <form>
+    <Label for="fname">First Name: </Label>
+    <input type="text" name="firstName" id="fname" required placeholder="John">
+    <Label for="lname">Last Name: </Label>
+    <input type="text" name="lastName" id="lname" required placeholder="Smith">
+    <div>
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="other">Other</label>
+      <input type="radio" name="gender" id="other" value="other">
+
+    </div>
+    <div>
+      <label for="">
+        Email: 
+        <input type="email" name="email" id="" placeholder="your email"  required>
+      </label>
+      <label for="">
+        Password:
+        <input type="password" name="password" id="" pattern=".{5,10}" required title="Password must be between 5 and 10 characters"> 
+      </label>
+    </div>
+    <div>
+      <label for="">
+        Birthday:
+        <select name="" id="">
+          <option value="Month">Month</option>
+          <option value="Jan">Jan</option>
+          <option value="Feb">Feb</option>
+          <option value="Mar">Mar</option>
+
+        </select>
+        <select name="" id="">
+          <option value="Day">Day</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+
+        </select>
+        <select name="" id="">
+          <option value="Year">Year</option>
+          <option value="2018">2018</option>
+          <option value="2019">2019</option>
+          <option value="2020">2020</option>
+
+        </select>
+      </label>
+
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
