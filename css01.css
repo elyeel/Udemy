@@ -1,0 +1,14 @@
+h1 {
+  color: #ff0000;
+}
+li {
+  color: orange;
+}
+h4 {
+  color:purple;
+  background-color: lightblue;
+}
+
+body{
+  background-image: url(https://image.shutterstock.com/image-photo/wood-texture-260nw-40369678.jpg);
+}
