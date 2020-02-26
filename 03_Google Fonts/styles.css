@@ -1,11 +1,11 @@
 /*font-family*/
 
 p {
-	font-family: 'Trade Winds';
+	font-family: Raleway;
 }
 
 h1 {
-	font-family: 'Odibee Sans';
+	font-family: Indie Flower;
 }
 
 /*font-size*/
@@ -26,10 +26,19 @@ span {
 	font-size: 2.0em;
 }
 
+/*font-weight*/
+
+p{
+	font-weight: normal;
+}
+
+/*line-height*/
+
 p {
-	font-weight: bold;
 	line-height: 1.5;
 }
+
+/*text-align*/
 
 h1 {
 	text-align: right;
@@ -39,10 +48,13 @@ p {
 	text-align: center;
 }
 
-/* text decoration */
+/*text-decoration*/
+
 p {
 	text-decoration: underline;
 }
 
-/* font-family: 'Trade Winds', ;
-font-family: 'Odibee Sans', ; */
+h1 {
+	text-decoration: line-through;
+}
+
