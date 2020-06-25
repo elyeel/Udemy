@@ -10,6 +10,7 @@ let button = document.querySelector("button");
 //   whiteColour = !whiteColour;
 // });
 
+//solution 2 using css toggle
 button.addEventListener("click", () => {
   document.body.classList.toggle("purple");
 });
