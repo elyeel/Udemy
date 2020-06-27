@@ -1,17 +1,27 @@
-let colours = [
-  "rgb(255, 0, 0)",
-  "rgb(255, 255, 0)",
-  "rgb(0, 255, 0)",
-  "rgb(0, 255, 255)",
-  "rgb(0, 0, 255)",
-  "rgb(255, 0, 255)",
-];
+const random = (r) => {
+  return Math.floor(Math.random() * (r + 1));
+}
+
+const generateRandomColour = function(n) {
+  // make an array
+  const clrArr = [];
+  // add n random colours to array
+  for (let i = 0; i < n; ++i) {
+    let tempColour = `rgb(${random(255)}, ${random(255)}, ${random(255)})`
+    clrArr.push(tempColour);
+  }
+  // return that array
+  return clrArr;
+}
+
+let colours = generateRandomColour(6);
 
 const pickColour = function() {
   let random = Math.floor(Math.random() * colours.length);
   return colours[random];
 }
 
+let h1 = document.querySelector("h1");
 let squares = document.querySelectorAll(".square");
 let pickedColour = pickColour();
 let colourDisplay = document.getElementById("colourDisplay");
@@ -29,6 +39,7 @@ for (let i=0; i<squares.length; ++i) {
     if (clickedColour === pickedColour) {
       messageDisplay.textContent = "Correct";
       changeColour(pickedColour);
+      h1.style.backgroundColor = pickedColour;
     } else {
       squares[i].style.backgroundColor = "#232323";
       messageDisplay.textContent = "Try Again";
