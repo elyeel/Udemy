@@ -75,7 +75,7 @@ resetButton.addEventListener("click", () => {
   for (let i = 0; i < squares.length; ++i) {
     squares[i].style.backgroundColor = colours[i];
   }
-  h1.style.backgroundColor = "#232323";
+  h1.style.backgroundColor = "steelblue";
 });
 
 for (let i = 0; i < squares.length; ++i) {
