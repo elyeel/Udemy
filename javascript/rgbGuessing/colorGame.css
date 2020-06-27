@@ -16,6 +16,10 @@ body {
   -moz-transition: background 0.6s;
 }
 
+/* .square:focus {
+  outline: invert;
+} */
+
 #container {
   max-width: 600px;
   margin: 20px auto;
