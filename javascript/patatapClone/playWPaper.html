@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../patatapClone/paper-full.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="circles.css">
+    <script type="text/paperscript" canvas="myCanvas">
+      for (var i=0; i<10; ++i) {
+        for (var j=0; j<10; ++j) {
+
+          new Path.Circle(new Point(i*100, j*100), 10).fillColor = 'rgb(10+20*i, 255, 20*j)';
+        }
+      }
+
+      
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="myCanvas" resize></canvas>
+  </body>
+</html>
