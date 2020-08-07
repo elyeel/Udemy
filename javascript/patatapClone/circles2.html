@@ -6,16 +6,27 @@
     <script src="paper-full.js" type="text/javascript"></script>
     <link rel="stylesheet" href="circles.css" />
     <script type="text/paperscript" canvas="myCanvas">
+      var circles = [];
+
       function onKeyDown(event) {
         // set max view size
         var maxPoint = new Point(view.size.width, view.size.height);
         var randomPoint = Point.random();
         var point = maxPoint * randomPoint;
+        var newCircle = new Path.Circle(point, 500);
+        newCircle.fillColor = "yellow";
+        circles.push(newCircle);
 
         // When a key is pressed, set the content of the text item:
-        new Path.Circle(new Point(point), 10).fillColor = 'yellow';
+        // new Path.Circle(new Point(point), 10).fillColor = 'yellow';
       }
 
+      function onFrame(event) {
+        for (var i = 0; i < circles.length; i++) {
+          circles[i].fillColor.hue += 1;
+          circles[i].scale(.9);
+        }
+      }
 
     </script>
     <title>Circles</title>
