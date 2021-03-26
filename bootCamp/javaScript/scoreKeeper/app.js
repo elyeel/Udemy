@@ -40,13 +40,13 @@ const reset = () => {
 	p2Score = 0;
 	p1Display.textContent = 0;
 	p2Display.textContent = 0;
-	p1Display.classList.remove();
-	p2Display.classList.remove();
+	p1Display.classList.remove('winner', 'loser');
+	p2Display.classList.remove('winner', 'loser');
 };
 
-maxScoreSelect.addEventListener('change', () => {
-	winningScore = parseInt(maxScoreSelect.value);
-	console.log(this, winningScore);
+maxScoreSelect.addEventListener('change', function() {
+	// value of this using regular f() differs from using arrow f() (this refer to parent's)
+	winningScore = parseInt(this.value);
 	reset();
 });
 
